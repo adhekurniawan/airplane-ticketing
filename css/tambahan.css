@@ -1,0 +1,54 @@
+#breadcrum{
+	width: 100%;
+	height: 130px;
+	background:linear-gradient(97deg,#66CDF9,#869EF7)!important;
+	color: #fff;
+	padding-top: 30px; 
+}
+#breadcrum h2{
+	margin-bottom: 10px;
+	color: #fff;
+	font-size: 22px;
+}
+#breadcrum p{
+	font-size: 13px;
+	color: #fff;
+}
+
+#booking{
+	padding: 70px 0px;
+}
+.divide{
+	width: 100%;
+	height: 70px;
+	background: #f7f8f8;
+	margin-bottom: 30px;
+	padding: 20px;
+}
+
+
+.note{
+	width: 100%;
+	height: 210px;
+	background: #f7f8f8;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+
+
+
+#login{
+	width: 100%;
+	height: 100vh;
+	background: #f7f8f8;
+}
+.box-login{
+	background: #fff;
+	width: 100%;
+	height: 300px;
+	margin-top: 170px;
+	padding: 30px;
+	border-radius: 5px;
+	box-shadow: 1px 5px 10px #ddd;
+}
