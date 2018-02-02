@@ -7,10 +7,10 @@
 		<?php
 		require_once '../../action/connect.php';
 		if (isset($_POST['Input'])){
-			$nama_pesawat = $_POST['nama_pesawat'];
-			$kode = $_POST['kode'];
-			$deskripsi = $_POST['deskripsi'];
-			$seat = $_POST['seat'];			
+			$nama_pesawat	= $_POST['nama_pesawat'];
+			$kode 			= $_POST['kode'];
+			$deskripsi 		= $_POST['deskripsi'];
+			$seat 			= $_POST['seat'];			
 			$connect->query("INSERT INTO transportation (nama_pesawat, kode, deskripsi, seat) VALUES ('$nama_pesawat','$kode','$deskripsi','$seat')");
 		}
 		?>
@@ -107,20 +107,21 @@
 					</div>
 				</div>
 				<!--//content-inner-->
+				
 
 
 				<?php require_once 'page/navbar.php' ?>
 
-		</script>
-		<!--js -->
-		<script src="js/jquery.nicescroll.js"></script>
-		<script src="js/scripts.js"></script>
+			</script>
+			<!--js -->
+			<script src="js/jquery.nicescroll.js"></script>
+			<script src="js/scripts.js"></script>
 
-		<!-- Bootstrap Core JavaScript -->
-		<script src="js/bootstrap.min.js"></script>
-	</body>
-	</html>
-	<?php
-} else {
-	echo "<script>window.location='../login.php';</script>";
-}
+			<!-- Bootstrap Core JavaScript -->
+			<script src="js/bootstrap.min.js"></script>
+		</body>
+		</html>
+		<?php
+	} else {
+		echo "<script>window.location='../login.php';</script>";
+	}

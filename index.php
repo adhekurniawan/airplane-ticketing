@@ -16,7 +16,6 @@
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
 							<li class="active"><a href="index.php">Home</a></li>
-							<li><a href="service.php">Service</a></li>
 							<li><a href="booking.php">Booking</a></li>
 							<li><a href="contact.php">Contact</a></li>
 						</ul>

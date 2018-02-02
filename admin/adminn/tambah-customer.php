@@ -1,25 +1,24 @@
- 		<?php
- 		session_start();
- 		if($_SESSION['traveler']){
+	<?php
+	session_start();
+	if($_SESSION['traveler']){
 
- 			?>
+		?>
 
- 			<?php
- 			require_once '../../action/connect.php';
- 			$ambilid = $_GET['id'];
- 			$res = $connect ->query("SELECT * from transportation where id='$ambilid'");
- 			$data = $res->fetch_array(MYSQLI_ASSOC);
-
- 			if(isset($_POST['edit'])){
- 				$nama_pesawat = $_POST['nama_pesawat'];
- 				$kode = $_POST['kode'];
- 				$deskripsi = $_POST['deskripsi'];
- 				$seat = $_POST['seat'];
- 				$update = $connect->query("UPDATE transportation SET nama_pesawat='$nama_pesawat', kode='$kode', deskripsi='$deskripsi', seat='$seat' WHERE id='$ambilid'");
- 				header("location:dafpesawat.php");
-
- 			}
- 			?>
+		<?php
+		require_once '../../action/connect.php';
+		if (isset($_POST['Input'])){
+			$nama	= $_POST['nama'];
+			$email	= $_POST['email'];
+			$asal	= $_POST['asal'];
+			$tujuan	= $_POST['tujuan'];
+			$dewasa	= $_POST['dewasa'];
+			$anak	= $_POST['anak'];
+			$telp	= $_POST['telp'];
+			$alamat	= $_POST['alamat'];
+			$jenkel	= $_POST['jenkel'];			
+			$connect->query("INSERT INTO customer (nama, alamat, telp, dewasa, anak, jenkel, asal, tujuan, seat) VALUES ( '$nama', '$alamat', '$telp', '$dewasa', '$anak', '$jenkel', '$asal', '$tujuan', '$seat')");
+		}
+		?>
 	<!--
 	Author: W3layouts
 	Author URL: http://w3layouts.com
@@ -82,23 +81,54 @@
 							<div class="form-body">
 								<form class="form-horizontal" role="form" method="POST"> 
 									<div class="form-group"> 
-										<label>Nama Pesawat</label> 
-										<input type="text" class="form-control" id="nama_pesawat" placeholder="Nama Pesawat" name="nama_pesawat" value="<?php echo $data['nama_pesawat'];?>"> 
-									</div> 
+										<label>Nama</label> 
+										<input type="text" class="form-control" placeholder="Nama" name="nama"> 
+									</div> 									
 									<div class="form-group"> 
-										<label>Kode Pesawat</label> 
-										<input type="text" class="form-control" id="kode" placeholder="Kode Pesawat" name="kode" value="<?php echo $data['kode'];?>"> 
-									</div> 
+										<label>Email</label> 
+										<input type="email" class="form-control" placeholder="email" name="email"> 
+									</div>						
 									<div class="form-group"> 
-										<label>Deskripsi Pesawat</label> 
-										<input type="text" class="form-control" id="deskripsi" placeholder="Deskripsi Pesawat" name="deskripsi" value="<?php echo $data['deskripsi'];?>"> 
+										<label>Jenis Kelamin</label> 
+										<input type="radio" placeholder="Email" name="jenkel" value="laki-laki" /> Laki Laki
+										<input type="radio" placeholder="Email" name="jenkel" value="perempuan" /> perempuan
+									</div>		
+									<div class="form-group">
+										<label>Dewasa</label>
+										<select class="form-control" name="dewasa">
+											<option value="Penumpang Dewasa">---- Penumpang Dewasa ----</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>			
+									<div class="form-group">
+										<label>Anak</label>
+										<select class="form-control" name="anak">
+											<option value="Penumpang Anak">---- Penumpang Anak ----</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
 									</div>
-									<div class="form-group"> 
-										<label>Seat</label> 
-										<input type="text" class="form-control" id="seat" placeholder="Jumlah Seat" name="seat" value="<?php echo $data['seat'];?>"> 
+									<div class="form-group">
+										<label>Asal</label>
+										<input type="text" placeholder="Asal" name="asal" class="form-control" />
+									</div>
+									<div class="form-group">
+										<label>Tujuan</label>
+										<input type="text" placeholder="Tujuan" name="tujuan" class="form-control" />
+									</div>
+									<div class="form-group">
+										<label>No. Telp</label>
+										<input type="text" placeholder="No. Telp" name="telp" class="form-control" />
+									</div>
+									<div class="form-group">
+										<label>Alamat</label>
+										<textarea class="form-control" name="alamat" rows="10"></textarea>
 									</div>
 									<div class="submit">
-										<input type="submit" value="edit" name="edit">
+										<input type="submit" value="Input" name="Input">
 									</div> 
 								</form> 
 							</div>
@@ -113,7 +143,12 @@
 					</div>
 				</div>
 				<!--//content-inner-->
+				
+
+
 				<?php require_once 'page/navbar.php' ?>
+
+			</script>
 			<!--js -->
 			<script src="js/jquery.nicescroll.js"></script>
 			<script src="js/scripts.js"></script>

@@ -60,48 +60,47 @@
 					<!--/sub-heard-part-->	
 					<!--/forms-->
 					<div class="forms-main">
-						<h2 class="inner-tittle">Data Pesawat</h2>
+						<h2 class="inner-tittle">Data Reservasi</h2>
 						<div class="graph-form">
 							<div class="form-body">
 								<div class="container">
 									<div class="row">
-										<a href="tambah-pesawat.php" class="btn btn-primary">tambah data</a>
+
+										<a href="tambah-reservasi.php" class="btn btn-primary">tambah data</a>
 										<p></p>
 										<div id="tbl-length" class="col-sm-12 col-md-10">
 											<table class="table table-striped table-responsive table-hover">
 												<thead>
 													<th>No</th>
-													<th>Nama Pesawat</th>
-													<th>Kode</th>
-													<th>Deskripsi</th>
-													<th>Seat</th>
+													<th>Kode Reservasi</th>
+													<th>Tanggal Keberangkatan</th>
+													<th>Keberangkatan</th>
 													<th>Opsi</th>
 												</thead>
 												<tbody>
 
-													<?php
-                          // Load file connect.php
-													require_once '../../action/connect.php';
+														<?php
+	                          // Load file connect.php
+														require_once '../../action/connect.php';
 
-  														$query = "SELECT * FROM transportation"; // Query untuk menampilkan semua data siswa
-  														$sql = mysqli_query($connect, $query); // Eksekusi/Jalankan query dari variabel $query
-  														$no=1;
-  														while($data = mysqli_fetch_array($sql)){ // Ambil semua data dari hasil eksekusi $sql
-  															echo "<tr>";
-  															echo "<td>".$no."</td>";
-  															echo "<td>".$data['nama_pesawat']."</td>";    
-  															echo "<td>".$data['kode']."</td>";
-  															echo "<td>".$data['deskripsi']."</td>";
-  															echo "<td>".$data['seat']."</td>";
-  															echo "<td>
-  															<a class='fa fa-edit' href='editpesawat.php?id=".$data['id']."'></a>
-  															<a class='fa fa-trash-o' href='deletpesawat.php?aksi=delete&id=".$data['id']."'></a>
-  															</td>";
+	  														$query = "SELECT * FROM reservation"; // Query untuk menampilkan semua data siswa
+	  														$sql = mysqli_query($connect, $query); // Eksekusi/Jalankan query dari variabel $query
+	  														$no=1;
+	  														while($data = mysqli_fetch_array($sql)){ // Ambil semua data dari hasil eksekusi $sql
+	  															echo "<tr>";
+	  															echo "<td>".$no."</td>";
+	  															echo "<td>".$data['kode_reservasi']."</td>";    
+	  															echo "<td>".$data['tanggal_reservasi']."</td>";
+	  															echo "<td>".$data['keberangkatan']."</td>";
+	  															echo "<td>
+	  															<a class='fa fa-edit' href='editreservasi.php?id=".$data['id']."'></a>
+	  															<a class='fa fa-trash-o' href='deletereservasi.php?aksi=delete&id=".$data['id']."'></a>
+	  															</td>";
 
-  															echo "</tr>";
-  															$no++;
-  														}
-  														?>
+	  															echo "</tr>";
+	  															$no++;
+	  														}
+	  														?>
 
   													</tbody>
   												</table>

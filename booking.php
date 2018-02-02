@@ -5,35 +5,23 @@
 	<div id="fh5co-wrapper">
 		<div id="fh5co-page">
 
-			<header id="fh5co-header-section" class="sticky-banner">
-				<div class="container">
-					<div class="nav-header">
-						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
-						<h1 id="fh5co-logo"><a href="index.php"><i class="icon-airplane"></i>Travel</a></h1>
-						<!-- START #fh5co-menu-wrap -->
-						<nav id="fh5co-menu-wrap" role="navigation">
-							<ul class="sf-menu" id="fh5co-primary-menu">
-								<li><a href="index.php">Home</a></li>
-								<li>
-									<a href="vacation.php" class="fh5co-sub-ddown">Vacations</a>
-									<ul class="fh5co-sub-menu">
-										<li><a href="#">Family</a></li>
-										<li><a href="#">CSS3 &amp; HTML5</a></li>
-										<li><a href="#">Angular JS</a></li>
-										<li><a href="#">Node JS</a></li>
-										<li><a href="#">Django &amp; Python</a></li>
-									</ul>
-								</li>
-								<li class="active"><a href="flight.php">Flights</a></li>
-								<li><a href="hotel.php">Hotel</a></li>
-								<li><a href="car.php">Car</a></li>
-								<li><a href="blog.php">Blog</a></li>
-								<li><a href="contact.php">Contact</a></li>
-							</ul>
-						</nav>
-					</div>
+		<header id="fh5co-header-section" class="sticky-banner">
+			<div class="container">
+				<div class="nav-header">
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
+					<h1 id="fh5co-logo"><a href="index.php"></i>E-ticketing</a></h1>
+					<!-- START #fh5co-menu-wrap -->
+					<nav id="fh5co-menu-wrap" role="navigation">
+						<ul class="sf-menu" id="fh5co-primary-menu">
+							<li><a href="index.php">Home</a></li>
+							<li class="active"><a href="booking.php">Booking</a></li>
+							<li><a href="contact.php">Contact</a></li>
+						</ul>
+					</nav>
 				</div>
-			</header>
+			</div>
+		</header>
+
 
 			<section id="breadcrum">
 				<div class="container">

@@ -60,80 +60,88 @@
 					<!--/sub-heard-part-->	
 					<!--/forms-->
 					<div class="forms-main">
-						<h2 class="inner-tittle">Data Pesawat</h2>
+						<h2 class="inner-tittle">Data Customer</h2>
 						<div class="graph-form">
 							<div class="form-body">
 								<div class="container">
-									<div class="row">
-										<a href="tambah-pesawat.php" class="btn btn-primary">tambah data</a>
-										<p></p>
+									<div class="row"><!--
+										<a href="tambah-customer.php" class="btn btn-primary">tambah data</a>
+										<p></p>-->
 										<div id="tbl-length" class="col-sm-12 col-md-10">
 											<table class="table table-striped table-responsive table-hover">
 												<thead>
 													<th>No</th>
-													<th>Nama Pesawat</th>
-													<th>Kode</th>
-													<th>Deskripsi</th>
-													<th>Seat</th>
+													<th>nama</th>
+													<th>alamat</th>
+													<th>Jenis Kelamin</th>
+													<th>Asal</th>
+													<th>Tujuan</th>
+													<th>Dewasa</th>
+													<th>Anak</th>
+													<th>Telepon</th>
 													<th>Opsi</th>
 												</thead>
 												<tbody>
 
 													<?php
-                          // Load file connect.php
+	                          // Load file connect.php
 													require_once '../../action/connect.php';
 
-  														$query = "SELECT * FROM transportation"; // Query untuk menampilkan semua data siswa
-  														$sql = mysqli_query($connect, $query); // Eksekusi/Jalankan query dari variabel $query
-  														$no=1;
-  														while($data = mysqli_fetch_array($sql)){ // Ambil semua data dari hasil eksekusi $sql
-  															echo "<tr>";
-  															echo "<td>".$no."</td>";
-  															echo "<td>".$data['nama_pesawat']."</td>";    
-  															echo "<td>".$data['kode']."</td>";
-  															echo "<td>".$data['deskripsi']."</td>";
-  															echo "<td>".$data['seat']."</td>";
-  															echo "<td>
-  															<a class='fa fa-edit' href='editpesawat.php?id=".$data['id']."'></a>
-  															<a class='fa fa-trash-o' href='deletpesawat.php?aksi=delete&id=".$data['id']."'></a>
-  															</td>";
+	  														$query = "SELECT * FROM customer"; // Query untuk menampilkan semua data siswa
+	  														$sql = mysqli_query($connect, $query); // Eksekusi/Jalankan query dari variabel $query
+	  														$no=1;
+	  														while($data = mysqli_fetch_array($sql)){ // Ambil semua data dari hasil eksekusi $sql
+	  															echo "<tr>";
+	  															echo "<td>".$no."</td>";
+	  															echo "<td>".$data['nama']."</td>";    
+	  															echo "<td>".$data['alamat']."</td>";
+	  															echo "<td>".$data['jenkel']."</td>";
+	  															echo "<td>".$data['asal']."</td>";
+	  															echo "<td>".$data['tujuan']."</td>";
+	  															echo "<td>".$data['dewasa']."</td>";
+	  															echo "<td>".$data['anak']."</td>";
+	  															echo "<td>".$data['telp']."</td>";
+	  															echo "<td>
+	  															<a class='fa fa-edit' href='editcustomer.php?id=".$data['id']."'></a>
+	  															<a class='fa fa-trash-o' href='deletcustomer.php?aksi=delete&id=".$data['id']."'></a>
+	  															</td>";
 
-  															echo "</tr>";
-  															$no++;
-  														}
-  														?>
+	  															echo "</tr>";
+	  															$no++;
+	  														}
+	  														?>
 
-  													</tbody>
-  												</table>
-  											</div>
-  										</div>
-  									</div>
-  								</div>
-  							</div>
-  						</div>
-  						<!--/forms-inner-->
+	  													</tbody>
+	  												</table>
+	  											</div>
+	  										</div>
+	  									</div>
+	  								</div>
+	  							</div>
+	  						</div>
+	  						<!--/forms-inner-->
 
-  						<!--//outer-wp-->
-  						<!--footer section start-->
+	  						<!--//outer-wp-->
+	  						<!--footer section start-->
 
-  						<!--footer section end-->
-  					</div>
-  				</div>
-  				<!--//content-inner-->
-
-
-  				<?php require_once 'page/navbar.php' ?>
+	  						<!--footer section end-->
+	  					</div>
+	  				</div>
+	  				<!--//content-inner-->
 
 
-  				<!--js -->
-  				<script src="js/jquery.nicescroll.js"></script>
-  				<script src="js/scripts.js"></script>
+	  				<?php require_once 'page/navbar.php' ?>
 
-  				<!-- Bootstrap Core JavaScript -->
-  				<script src="js/bootstrap.min.js"></script>
-  			</body>
-  			</html>
-  			<?php
-  		} else {
-  			echo "<script>window.location='../login.php';</script>";
-  		}
+
+	  				<!--js -->
+	  				<script src="js/jquery.nicescroll.js"></script>
+	  				<script src="js/scripts.js"></script>
+
+	  				<!-- Bootstrap Core JavaScript -->
+	  				<script src="js/bootstrap.min.js"></script>
+	  			</body>
+	  			</html>
+	  			<?php
+	  		} else {
+	  			echo "<script>window.location='../login.php';</script>";
+	  		}

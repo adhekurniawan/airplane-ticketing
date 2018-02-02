@@ -7,15 +7,14 @@
  			<?php
  			require_once '../../action/connect.php';
  			$ambilid = $_GET['id'];
- 			$res = $connect ->query("SELECT * from transportation where id='$ambilid'");
+ 			$res = $connect ->query("SELECT * from reservation where id='$ambilid'");
  			$data = $res->fetch_array(MYSQLI_ASSOC);
 
  			if(isset($_POST['edit'])){
- 				$nama_pesawat = $_POST['nama_pesawat'];
- 				$kode = $_POST['kode'];
+ 				$kode_reservasi = $_POST['kode_reservasi'];
  				$deskripsi = $_POST['deskripsi'];
- 				$seat = $_POST['seat'];
- 				$update = $connect->query("UPDATE transportation SET nama_pesawat='$nama_pesawat', kode='$kode', deskripsi='$deskripsi', seat='$seat' WHERE id='$ambilid'");
+ 				$keberangkatan = $_POST['keberangkatan'];
+ 				$update = $connect->query("UPDATE reservasi SET kode_reservasi='$kode_reservasi', tanggal_reservasi='$tanggal_reservasi',  keberangkatan='$keberangkatan' WHERE id='$ambilid'");
  				header("location:dafpesawat.php");
 
  			}
@@ -82,20 +81,16 @@
 							<div class="form-body">
 								<form class="form-horizontal" role="form" method="POST"> 
 									<div class="form-group"> 
-										<label>Nama Pesawat</label> 
-										<input type="text" class="form-control" id="nama_pesawat" placeholder="Nama Pesawat" name="nama_pesawat" value="<?php echo $data['nama_pesawat'];?>"> 
-									</div> 
-									<div class="form-group"> 
 										<label>Kode Pesawat</label> 
-										<input type="text" class="form-control" id="kode" placeholder="Kode Pesawat" name="kode" value="<?php echo $data['kode'];?>"> 
+										<input type="text" class="form-control" id="kode_reservasi" placeholder="Nama Pesawat" name="kode_reservasi" value="<?php echo $data['kode_reservasi'];?>"> 
 									</div> 
 									<div class="form-group"> 
-										<label>Deskripsi Pesawat</label> 
-										<input type="text" class="form-control" id="deskripsi" placeholder="Deskripsi Pesawat" name="deskripsi" value="<?php echo $data['deskripsi'];?>"> 
-									</div>
+										<label>Tanggal Keberangkatan</label> 
+										<input type="text" class="form-control" id="tanggal_reservasi" placeholder="Kode Pesawat" name="tanggal_reservasi" value="<?php echo $data['tanggal_reservasi'];?>"> 
+									</div> 
 									<div class="form-group"> 
-										<label>Seat</label> 
-										<input type="text" class="form-control" id="seat" placeholder="Jumlah Seat" name="seat" value="<?php echo $data['seat'];?>"> 
+										<label>keberangkatan</label> 
+										<input type="text" class="form-control" id="keberangkatan" placeholder="Jumlah keberangkatan" name="keberangkatan" value="<?php echo $data['keberangkatan'];?>"> 
 									</div>
 									<div class="submit">
 										<input type="submit" value="edit" name="edit">
@@ -113,7 +108,9 @@
 					</div>
 				</div>
 				<!--//content-inner-->
+			
 				<?php require_once 'page/navbar.php' ?>
+
 			<!--js -->
 			<script src="js/jquery.nicescroll.js"></script>
 			<script src="js/scripts.js"></script>
