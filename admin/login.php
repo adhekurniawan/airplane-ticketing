@@ -28,7 +28,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Augment an Admin Panel Category Flat Bootstrap Responsive Web Template | Login :: w3layouts</title>
+	<title>Login - Travel</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Augment Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -38,6 +38,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
 	<!-- Custom CSS -->
 	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link href="css/custom.css" rel='stylesheet' type='text/css' />
 	<!-- Graph CSS -->
 	<link href="css/font-awesome.css" rel="stylesheet"> 
 	<!-- jQuery -->
@@ -53,26 +54,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	
 	<div class="error_page">
 		<!--/login-top-->
-		
 		<div class="error-top">
 			<h2 class="inner-tittle page"></h2>
 			<div class="login">
-				<h3 class="inner-tittle t-inner">Login</h3>
-				
+				<h3 class="inner-tittle t-inner">TRAVEL LOGIN</h3>
 				<form role="form" method="POST">
 					<input type="text" class="text" name="nama" placeholder="nama">
 					<input type="password" name="password" placeholder="Password">
 					<div class="submit"><input type="submit" value="Login" name="login"></div>
 					<div class="clearfix"></div>
-					
-					
 				</form>
 			</div>
-
-			
 		</div>
-		
-		
 		<!--//login-top-->
 	</div>
 	

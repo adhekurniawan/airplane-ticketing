@@ -79,12 +79,12 @@
 													<th>Dewasa</th>
 													<th>Anak</th>
 													<th>Telepon</th>
-													<th>Opsi</th>
+													<!--<th>Opsi</th>-->
 												</thead>
 												<tbody>
 
 													<?php
-	                          // Load file connect.php
+	                          						// Load file connect.php
 													require_once '../../action/connect.php';
 
 	  														$query = "SELECT * FROM customer"; // Query untuk menampilkan semua data siswa
@@ -101,10 +101,10 @@
 	  															echo "<td>".$data['dewasa']."</td>";
 	  															echo "<td>".$data['anak']."</td>";
 	  															echo "<td>".$data['telp']."</td>";
-	  															echo "<td>
-	  															<a class='fa fa-edit' href='editcustomer.php?id=".$data['id']."'></a>
-	  															<a class='fa fa-trash-o' href='deletcustomer.php?aksi=delete&id=".$data['id']."'></a>
-	  															</td>";
+	  															//echo "<td>
+	  															//<a class='fa fa-edit' href='edit-customer.php?id=".$data['id']."'></a>
+	  															//<a class='fa fa-trash-o' href='delete-customer.php?aksi=delete&id=".$data['id']."'></a>
+	  															//</td>";
 
 	  															echo "</tr>";
 	  															$no++;

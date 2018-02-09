@@ -2764,7 +2764,7 @@ ul#menu-comunicacao-sub {
 }
 /*--/404--*/
 .error_page {
-       background: #09C6AB;
+    background: #00aeef;
     position: relative;
     padding: 11em 0;
     width: 100%;
@@ -2849,8 +2849,8 @@ a.read.fourth:hover{
 		outline: none;
 		padding: 10px 15px;
 		width: 100%;
-		border:2px solid #09C6AB;
-		background: #09C6AB;
+		border:2px solid transparent;
+		background: #00aeef;
 		margin: 0;
 		    font-family: 'Roboto', sans-serif;
 			    transition: 0.5s all;

@@ -7,10 +7,10 @@
 		<?php
 		require_once '../../action/connect.php';
 		if (isset($_POST['Input'])){
-			$kode_pesawat				= $_POST['kode_pesawat'];
-			$tanggal_keberangkatan 		= $_POST['tanggal_keberangkatan'];
+			$kode_reservasi				= $_POST['kode_reservasi'];
+			$tanggal_reservasi 		= $_POST['tanggal_reservasi'];
 			$keberangkatan 				= $_POST['keberangkatan'];			
-			$connect->query("INSERT INTO reservation (kode_pesawat, tanggal_keberangkatan, keberangkatan) VALUES ('$kode_pesawat','$tanggal_keberangkatan','$keberangkatan')");
+			$connect->query("INSERT INTO reservation (kode_reservasi, tanggal_reservasi, keberangkatan) VALUES ('$kode_reservasi','$tanggal_reservasi','$keberangkatan')");
 		}
 		?>
 	<!--
@@ -70,20 +70,21 @@
 					<!--/sub-heard-part-->	
 					<!--/forms-->
 					<div class="forms-main">
-						<h2 class="inner-tittle">Form Data Pesawat</h2>
+						<h2 class="inner-tittle">Data Reservasi</h2>
 						<div class="graph-form">
 							<div class="form-body">
 								<form class="form-horizontal" role="form" method="POST"> 
 									<div class="form-group"> 
-										<label>kode_pesawat Pesawat</label> 
-										<input type="text" class="form-control" id="kode_pesawat" placeholder="kode_pesawat Pesawat" name="kode_pesawat"> 
-									</div> 									<div class="form-group"> 
-										<label>tanggal keberangkatan</label> 
-										<input type="date" class="form-control" id="tanggal_keberangkatan" placeholder="tanggal_keberangkatan" name="tanggal_keberangkatan"> 
+										<label>Kode Reservasi</label> 
+										<input type="text" class="form-control" id="kode_reservasi" placeholder="Kode Reservasi" name="kode_reservasi"> 
+									</div> 									
+									<div class="form-group"> 
+										<label>Tanggal Keberangkatan</label> 
+										<input type="date" class="form-control" id="tanggal_reservasi" placeholder="Tanggal Keberangkatan" name="tanggal_reservasi"> 
 									</div>
 									<div class="form-group"> 
 										<label>keberangkatan</label> 
-										<input type="text" class="form-control" id="keberangkatan" placeholder="keberangkatan" name="keberangkatan"> 
+										<input type="time" class="form-control" id="keberangkatan" placeholder="Keberangkatan" name="keberangkatan"> 
 									</div>
 									<div class="submit">
 										<input type="submit" value="Input" name="Input">

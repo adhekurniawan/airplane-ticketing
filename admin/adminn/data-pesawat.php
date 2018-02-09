@@ -75,7 +75,9 @@
 													<th>Kode</th>
 													<th>Deskripsi</th>
 													<th>Seat</th>
+													<!--
 													<th>Opsi</th>
+													-->
 												</thead>
 												<tbody>
 
@@ -93,10 +95,10 @@
   															echo "<td>".$data['kode']."</td>";
   															echo "<td>".$data['deskripsi']."</td>";
   															echo "<td>".$data['seat']."</td>";
-  															echo "<td>
-  															<a class='fa fa-edit' href='editpesawat.php?id=".$data['id']."'></a>
-  															<a class='fa fa-trash-o' href='deletpesawat.php?aksi=delete&id=".$data['id']."'></a>
-  															</td>";
+  															//echo "<td>
+  															//<a class='fa fa-edit' href='editpesawat.php?id=".$data['id']."'></a>
+  															//<a class='fa fa-trash-o' href='deletpesawat.php?aksi=delete&id=".$data['id']."'></a>
+  															//</td>";
 
   															echo "</tr>";
   															$no++;

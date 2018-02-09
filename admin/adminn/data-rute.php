@@ -65,7 +65,7 @@
 							<div class="form-body">
 								<div class="container">
 									<div class="row">
-										<a href="tambah-pesawat.php" class="btn btn-primary">tambah data</a>
+										<a href="tambah-rute.php" class="btn btn-primary">tambah data</a>
 										<p></p>
 										<div id="tbl-length" class="col-sm-12 col-md-10">
 											<table class="table table-striped table-responsive table-hover">
@@ -94,8 +94,8 @@
 	  															echo "<td>".$data['tujuan']."</td>";
 	  															echo "<td>".$data['harga']."</td>";
 	  															echo "<td>
-	  															<a class='fa fa-edit' href='editpesawat.php?id=".$data['id']."'></a>
-	  															<a class='fa fa-trash-o' href='deletpesawat.php?aksi=delete&id=".$data['id']."'></a>
+	  															<a class='fa fa-edit' href='edit-rute.php?id=".$data['id']."'></a>
+	  															<a class='fa fa-trash-o' href='delete-rute.php?aksi=delete&id=".$data['id']."'></a>
 	  															</td>";
 
 	  															echo "</tr>";

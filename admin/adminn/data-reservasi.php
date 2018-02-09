@@ -93,8 +93,8 @@
 	  															echo "<td>".$data['tanggal_reservasi']."</td>";
 	  															echo "<td>".$data['keberangkatan']."</td>";
 	  															echo "<td>
-	  															<a class='fa fa-edit' href='editreservasi.php?id=".$data['id']."'></a>
-	  															<a class='fa fa-trash-o' href='deletereservasi.php?aksi=delete&id=".$data['id']."'></a>
+	  															<a class='fa fa-edit' href='edit-reservasi.php?id=".$data['id']."'></a>
+	  															<a class='fa fa-trash-o' href='delete-reservasi.php?aksi=delete&id=".$data['id']."'></a>
 	  															</td>";
 
 	  															echo "</tr>";

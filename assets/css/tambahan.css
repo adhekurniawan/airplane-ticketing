@@ -69,3 +69,30 @@
 .img-responsive{
 	height: 300px !important;
 }
+
+
+
+
+#header {
+  background-color: rgb(0, 174, 239);
+  top: 120px;
+  width: 100%;
+  height: 499px;
+  z-index: 47;
+}
+#rex {
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.902);
+  box-shadow: 0px 8px 38px 0px rgba(94, 94, 93, 0.21);
+  position: absolute;
+  left: 112px;
+  top: 500px;
+  width: 1142px;
+  height: 208px;
+  z-index: 58;
+}
+
+#populer{
+	width: 100%;
+	height: 500px;
+}
