@@ -10,77 +10,100 @@ if(@$_POST['login']){
 	$cek = mysqli_num_rows($sql);
 	if($cek>0){
 		$_SESSION['traveler'] = $id;
-		echo "<script>window.location = 'adminn/index.php'</script>";
+		echo "<script>window.location = 'index.php'</script>";
 	} else {
 		echo "<script>alert('Login Gagal')</script>";
 	}
 }
 
 ?>
-
-
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Login - Travel</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="Augment Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-	<!-- Bootstrap Core CSS -->
-	<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
-	<!-- Custom CSS -->
-	<link href="css/style.css" rel='stylesheet' type='text/css' />
-	<link href="css/custom.css" rel='stylesheet' type='text/css' />
-	<!-- Graph CSS -->
-	<link href="css/font-awesome.css" rel="stylesheet"> 
-	<!-- jQuery -->
-	<link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'>
-	<!-- lined-icons -->
-	<link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
-	<!-- //lined-icons -->
-	<script src="js/jquery-1.10.2.min.js"></script>
-	<!--clock init-->
-</head> 
-<body>
-	<!--/login-->
-	
-	<div class="error_page">
-		<!--/login-top-->
-		<div class="error-top">
-			<h2 class="inner-tittle page"></h2>
-			<div class="login">
-				<h3 class="inner-tittle t-inner">TRAVEL LOGIN</h3>
-				<form role="form" method="POST">
-					<input type="text" class="text" name="nama" placeholder="nama">
-					<input type="password" name="password" placeholder="Password">
-					<div class="submit"><input type="submit" value="Login" name="login"></div>
-					<div class="clearfix"></div>
-				</form>
-			</div>
-		</div>
-		<!--//login-top-->
-	</div>
-	
-	<!--//login-->
-	<!--footer section start-->
-	<div class="footer">
-		
-		
-	</div>
-	<!--footer section end-->
-	<!--/404-->
-	<!--js -->
-	<script src="js/jquery.nicescroll.js"></script>
-	<script src="js/scripts.js"></script>
-	<!-- Bootstrap Core JavaScript -->
-	<script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Dashboard - Travel</title>
+	<!-- Tell the browser to be responsive to screen width -->
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<!-- Bootstrap 3.3.7 -->
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+	<!-- Ionicons -->
+	<link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+	<!-- Theme style -->
+	<link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+
+	<!-- CSS STYLE -->
+	<link rel="stylesheet" href="assets/css/style.css">
+	<!-- CSS STYLE -->
+
+  	<!-- AdminLTE Skins. Choose a skin from the css/skins
+  		folder instead of downloading all of them to reduce the load. -->
+  		<link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+  		<!-- Morris chart -->
+  		<link rel="stylesheet" href="bower_components/morris.js/morris.css">
+  		<!-- jvectormap -->
+  		<link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
+  		<!-- Date Picker -->
+  		<link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  		<!-- Daterange picker -->
+  		<link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">
+  		<!-- bootstrap wysihtml5 - text editor -->
+  		<link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+  		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  	</head>
+
+  	<section id="login-page">
+  		<div class="container">
+  			<div class="login">
+  				<h3>TRAVEL LOGIN</h3>
+  				<form role="form" method="POST">
+  					<input class="form-control" type="text" class="text" name="nama" placeholder="Nama">
+  					<input class="form-control" type="password" name="password" placeholder="Password">
+  					<div class="submit"><input type="submit" value="LOGIN" name="login"></div>
+  					<div class="clearfix"></div>
+  				</form>
+  			</div>
+  		</div>
+  	</section>
+
+  	<!-- jQuery 3 -->
+  	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+  	<!-- jQuery UI 1.11.4 -->
+  	<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+  	<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  	<script>
+  		$.widget.bridge('uibutton', $.ui.button);
+  	</script>
+  	<!-- Bootstrap 3.3.7 -->
+  	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  	<!-- Morris.js charts -->
+  	<script src="bower_components/raphael/raphael.min.js"></script>
+  	<script src="bower_components/morris.js/morris.min.js"></script>
+  	<!-- Sparkline -->
+  	<script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+  	<!-- jvectormap -->
+  	<script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+  	<script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+  	<!-- jQuery Knob Chart -->
+  	<script src="bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
+  	<!-- daterangepicker -->
+  	<script src="bower_components/moment/min/moment.min.js"></script>
+  	<script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+  	<!-- datepicker -->
+  	<script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+  	<!-- Bootstrap WYSIHTML5 -->
+  	<script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+  	<!-- Slimscroll -->
+  	<script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+  	<!-- FastClick -->
+  	<script src="bower_components/fastclick/lib/fastclick.js"></script>
+  	<!-- AdminLTE App -->
+  	<script src="dist/js/adminlte.min.js"></script>
+  	<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  	<script src="dist/js/pages/dashboard.js"></script>
+  	<!-- AdminLTE for demo purposes -->
+  	<script src="dist/js/demo.js"></script>
+  </body>
+  </html>

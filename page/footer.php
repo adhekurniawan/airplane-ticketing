@@ -1,6 +1,8 @@
 
-<footer>
-	<div id="footer">
+<div class="footer">
+	<div class="copyright">
+		<p>© 2011-2018 Travel.com. All Rights Reserved</p>
+	</div>
 		<div class="container">
 			<div class="row row-bottom-padded-md">
 				<div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
@@ -67,8 +69,7 @@
 			</div>
 		</div>
 	</div>
-</footer>
-
+</div>
 
 
 </div>
@@ -104,6 +105,36 @@
 <!-- Main JS -->
 <script src="assets/js/main.js"></script>
 
+
+<script>
+	var width = 100;
+	var animation_speed = 700;
+	var time_val = 3000;
+	var current_slide = 1;
+
+	var $slider = $('#slider');
+	var $slide_container = $('.slides');
+	var $slides = $('.slide');
+
+	var interval;
+
+	$slides.each(function(index){
+		$(this).css('left',(index*100)+'%');
+	});
+
+	function startSlider() {
+		interval = setInterval(function() {
+			$slide_container.animate({'left': '-='+(width+'%')}, animation_speed, function() {
+				if (++current_slide === $slides.length) {
+					current_slide = 1;
+					$slide_container.css('left', 0);
+				}
+			});
+		}, time_val);
+	}
+
+	startSlider();
+</script>
 </body>
 </html>
 

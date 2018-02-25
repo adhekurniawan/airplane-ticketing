@@ -83,7 +83,6 @@
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
 							<li><a href="index.php">Home</a></li>
-							<li><a href="booking.php">Booking</a></li>
 							<li class="active"><a href="contact.php">Contact</a></li>
 						</ul>
 					</nav>
